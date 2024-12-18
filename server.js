@@ -48,11 +48,16 @@ app.use(notFoundHandler);
 // Error Handling Middleware
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000; // Change fallback to avoid conflict
+// const PORT = process.env.PORT || 3000; // Change fallback to avoid conflict
 
 
-// const PORT=5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// // const PORT=5000;
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
+const PORT = process.env.PORT || 3000; // Let OS assign a free port if none is specified
+
+const server = app.listen(PORT, () => {
+  const assignedPort = server.address().port; // Retrieve assigned port from the server object
+  console.log(`Server running on http://localhost:${assignedPort}`);
 });
-
