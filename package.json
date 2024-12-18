@@ -1,15 +1,16 @@
 {
   "name": "schoolmanagementsystem",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "app.js",
+  "type": "commonjs",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node app.js",
     "test": "jest"
   },
-  "author": "",
+  "author": "Bipasha Bhattacharjee",
   "license": "ISC",
   "description": "",
   "dependencies": {
