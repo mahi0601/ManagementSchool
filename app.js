@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('./config/db');
 
-const { errorHandler, notFoundHandler } = require('./middlewares/errorMiddleware');
+const { errorHandler, notFoundHandler } = require('../schoolmanagementsystem/middlewares/errorMiddleware');
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocs = require('./swagger');
