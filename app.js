@@ -26,7 +26,10 @@ mongoose()
   });
 
 
-  
+
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Welcome to the School Management API' });
+});
 app.use('/api/auth', authRoutes);        
 app.use('/api/schools', schoolRoutes);  
 app.use('/api/classrooms', classroomRoutes); 
@@ -37,9 +40,7 @@ app.use(errorHandler);
 app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Welcome to the School Management API' });
-});
+
 
 // process.on('SIGINT', () => {
 //   console.log('Shutting down server...');
@@ -59,4 +60,4 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
-module.exports=app;
+
