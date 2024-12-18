@@ -58,3 +58,6 @@ const PORT = process.env.PORT || 3000; // Change fallback to avoid conflict
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+module.exports=app;
+module.exports.handler = serverless(app);
