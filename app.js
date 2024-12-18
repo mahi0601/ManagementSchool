@@ -30,6 +30,7 @@ mongoose()
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the School Management API' });
 });
+app.set('trust proxy', 1); 
 app.use('/api/auth', authRoutes);        
 app.use('/api/schools', schoolRoutes);  
 app.use('/api/classrooms', classroomRoutes); 
