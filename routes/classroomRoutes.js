@@ -1,6 +1,6 @@
 const express = require('express');
 const { authenticate, authorizeRole } = require('../middlewares/authMiddleware');
-const { validateSchoolInput, handleValidationErrors } = require('../middlewares/validationMiddleware');
+// const { validateSchoolInput, handleValidationErrors } = require('../middlewares/validationMiddleware');
 const {
   createClassroom,
   getAllClassrooms,

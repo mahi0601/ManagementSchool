@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('./config/db');
 
-// const { errorHandler, notFoundHandler } = require('./middlewares/errorMiddleware');
+const { errorHandler, notFoundHandler } = require('./middlewares/errorMiddleware');
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocs = require('./swagger');
@@ -32,8 +32,8 @@ app.use('/api/schools', schoolRoutes);
 app.use('/api/classrooms', classroomRoutes); 
 app.use('/api/students', studentRoutes);  
 
-// app.use(notFoundHandler);
-// app.use(errorHandler);
+app.use(notFoundHandler);
+app.use(errorHandler);
 app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
@@ -41,15 +41,15 @@ app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the School Management API' });
 });
 
-process.on('SIGINT', () => {
-  console.log('Shutting down server...');
-  process.exit();
-});
+// process.on('SIGINT', () => {
+//   console.log('Shutting down server...');
+//   process.exit();
+// });
 
-process.on('SIGTERM', () => {
-  console.log('Server terminated.');
-  process.exit();
-});
+// process.on('SIGTERM', () => {
+//   console.log('Server terminated.');
+//   process.exit();
+// });
 
 const PORT = process.env.PORT || 3000; // Change fallback to avoid conflict
 
