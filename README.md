@@ -80,4 +80,11 @@ Using npm:
 ```bash
 npm test
 ```
+### Results
+
+**Production** :
+https://managementschool-production.up.railway.app/
+
+**Documentation** :
+https://app.swaggerhub.com/apis/MAHIBHATT2001_1/apidocs/1.0.0
 
