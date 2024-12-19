@@ -28,3 +28,12 @@ First, clone the project repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/school-management-system.git
 cd school-management-system
+```
+### Step 2: Install Dependencies
+
+Install the necessary dependencies by running:
+
+Using npm:
+
+```bash
+npm install
