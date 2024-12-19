@@ -49,7 +49,35 @@ JWT_SECRET=yourjwtsecret
 PORT=3000
 NODE_ENV=development
 ```
-**DATABASE_URL** : The connection string to your MongoDB database (you can also use a local database or a cloud database like MongoDB Atlas).
-**JWT_SECRET** : A secret key used to sign JWT tokens for authentication (you can generate a random secret or use a strong passphrase).
-**PORT** : The port the server will run on (default is 3000).
-**NODE_ENV** : The environment the app will run in (use development for local development).
+- **DATABASE_URL** : The connection string to your MongoDB database (you can also use a local database or a cloud database like MongoDB Atlas).
+- **JWT_SECRET** : A secret key used to sign JWT tokens for authentication (you can generate a random secret or use a strong passphrase).
+- **PORT** : The port the server will run on (default is 3000).
+- **NODE_ENV** : The environment the app will run in (use development for local development).
+
+### Step 4: Run the Application
+
+Once you've installed the dependencies and set up the environment variables,you can start the application.
+
+Using npm:
+```bash
+npm start
+```
+The application will run on http://localhost:3000 by default.
+
+### Step 5: Access API Documentation
+The API is documented using Swagger. Once the server is running, you can view the API documentation by navigating to:
+
+```bash
+http://localhost:3000/api-docs
+This will display the Swagger UI, which provides an interactive interface to explore and test the API endpoints.
+```
+
+### Testing
+To run the tests for the application, you can use the following command:
+
+Using npm:
+
+```bash
+npm test
+```
+
