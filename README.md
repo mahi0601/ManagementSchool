@@ -49,7 +49,7 @@ JWT_SECRET=yourjwtsecret
 PORT=3000
 NODE_ENV=development
 ```
-** DATABASE_UR**L: The connection string to your MongoDB database (you can also use a local database or a cloud database like MongoDB Atlas).
-** JWT_SECRET**: A secret key used to sign JWT tokens for authentication (you can generate a random secret or use a strong passphrase).
-** PORT**: The port the server will run on (default is 3000).
-** NODE_ENV**: The environment the app will run in (use development for local development).
+**DATABASE_URL** : The connection string to your MongoDB database (you can also use a local database or a cloud database like MongoDB Atlas).
+**JWT_SECRET** : A secret key used to sign JWT tokens for authentication (you can generate a random secret or use a strong passphrase).
+**PORT** : The port the server will run on (default is 3000).
+**NODE_ENV** : The environment the app will run in (use development for local development).
