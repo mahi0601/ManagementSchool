@@ -72,7 +72,7 @@ http://localhost:3000/api-docs
 This will display the Swagger UI, which provides an interactive interface to explore and test the API endpoints.
 ```
 
-### Testing
+### Step 6: Testing
 To run the tests for the application, you can use the following command:
 
 Using npm:
