@@ -37,3 +37,19 @@ Using npm:
 
 ```bash
 npm install
+```
+
+### Step 3: Set Up Environment Variables
+
+Create a .env file in the root directory of the project. This file will contain sensitive information like database credentials and JWT secret. Here's a sample .env file:
+
+```bash
+DATABASE_URL=mongodb://yourdatabaseurl
+JWT_SECRET=yourjwtsecret
+PORT=3000
+NODE_ENV=development
+```
+** DATABASE_URL: The connection string to your MongoDB database (you can also use a local database or a cloud database like MongoDB Atlas).
+** JWT_SECRET: A secret key used to sign JWT tokens for authentication (you can generate a random secret or use a strong passphrase).
+** PORT: The port the server will run on (default is 3000).
+** NODE_ENV: The environment the app will run in (use development for local development).
