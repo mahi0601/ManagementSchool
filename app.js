@@ -40,22 +40,7 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-
-
-
-// process.on('SIGINT', () => {
-//   console.log('Shutting down server...');
-//   process.exit();
-// });
-
-// process.on('SIGTERM', () => {
-//   console.log('Server terminated.');
-//   process.exit();
-// });
-
-const PORT = process.env.PORT || 3000; // Change fallback to avoid conflict
-
-// // app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

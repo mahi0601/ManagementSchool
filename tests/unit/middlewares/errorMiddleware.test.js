@@ -1,7 +1,5 @@
-// Test file for Error Middleware (tests/unit/middlewares/errorMiddleware.test.js)
 const { notFoundHandler, errorHandler } = require('../../../middlewares/errorMiddleware');
 
-// Mock dependencies
 const mockRequest = (overrides = {}) => ({ originalUrl: '/test-route', ...overrides });
 const mockResponse = () => {
   const res = {};
@@ -33,7 +31,7 @@ describe('Error Middleware', () => {
       const res = mockResponse();
       const next = mockNext;
 
-      res.statusCode = 200; // Simulate a default status
+      res.statusCode = 200; 
       errorHandler(err, req, res, next);
 
       expect(res.status).toHaveBeenCalledWith(500);
@@ -50,7 +48,7 @@ describe('Error Middleware', () => {
       const res = mockResponse();
       const next = mockNext;
 
-      res.statusCode = 400; // Simulate a bad request status
+      res.statusCode = 400; 
       errorHandler(err, req, res, next);
 
       expect(res.status).toHaveBeenCalledWith(400);
@@ -77,7 +75,7 @@ describe('Error Middleware', () => {
         stack: null,
       });
 
-      process.env.NODE_ENV = 'test'; // Reset the environment variable
+      process.env.NODE_ENV = 'test'; 
     });
   });
 });

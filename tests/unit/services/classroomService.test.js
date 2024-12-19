@@ -6,7 +6,7 @@ describe('Classroom Service - Unit Tests', () => {
     const classroomData = {
       name: 'Math Class',
       capacity: 30,
-      schoolId: '507f1f77bcf86cd799439011', // Provide a valid ObjectId
+      schoolId: '507f1f77bcf86cd799439011',
     };
 
     jest.spyOn(Classroom.prototype, 'save').mockResolvedValue(classroomData);

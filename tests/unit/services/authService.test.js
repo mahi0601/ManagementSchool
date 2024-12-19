@@ -13,7 +13,7 @@ describe('AuthService', () => {
     it('should register a new user successfully', async () => {
       const userData = { email: 'test@example.com', password: 'password123' };
 
-      User.findOne.mockResolvedValue(null); // No existing user
+      User.findOne.mockResolvedValue(null); 
       bcrypt.hash.mockResolvedValue('hashedPassword');
       User.mockImplementation(() => ({ save: jest.fn().mockResolvedValueOnce() }));
 

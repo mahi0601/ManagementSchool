@@ -1,4 +1,4 @@
-// Test file for Student Service (tests/unit/services/studentService.test.js)
+
 const mongoose = require('mongoose');
 const Student = require('../../../models/Student');
 const studentService = require('../../../services/studentService');
