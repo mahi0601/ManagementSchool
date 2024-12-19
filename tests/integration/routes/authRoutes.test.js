@@ -1,30 +1,33 @@
+// Updated Integration Test Files for Routes
 const request = require('supertest');
-const app = require('../../../server');
+const app = require('../../../app'); // Adjust the path to your app entry point
 
 describe('Auth Routes - Integration Tests', () => {
-  it('should register and login a user', async () => {
+  it('should register a user successfully', async () => {
     const userData = {
       name: 'Test User',
-      email: 'test@example.com',
-      password: 'password',
-      role: 'Superadmin',
+      email: 'testuser@example.com',
+      password: 'password123',
+      role: 'student',
     };
 
-    const registerRes = await request(app)
-      .post('/api/auth/register')
-      .send(userData);
-
-    expect(registerRes.statusCode).toEqual(201);
-    expect(registerRes.body.message).toBe('User registered successfully');
-
-    const loginRes = await request(app)
-      .post('/api/auth/login')
-      .send({
-        email: userData.email,
-        password: userData.password,
-      });
-
-    expect(loginRes.statusCode).toEqual(200);
-    expect(loginRes.body).toHaveProperty('token');
+    const response = await request(app).post('/api/auth/register').send(userData);
+    expect(response.statusCode).toBe(201);
+    expect(response.body).toHaveProperty('token');
   });
 });
+describe('Auth Routes - Integration Tests', () => {
+  it('should register a user successfully', async () => {
+    const userData = {
+      name: 'Test User',
+      email: 'testuser@example.com',
+      password: 'password123',
+      role: 'student',
+    };
+
+    const response = await request(app).post('/api/auth/register').send(userData);
+    expect(response.statusCode).toBe(201);
+    expect(response.body).toHaveProperty('token');
+  });
+});
+

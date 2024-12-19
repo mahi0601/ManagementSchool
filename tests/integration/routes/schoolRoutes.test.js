@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../../server');
+const app = require('../../../app');
 
 describe('School Routes - Integration Tests', () => {
   it('should create and fetch schools', async () => {
@@ -11,12 +11,9 @@ describe('School Routes - Integration Tests', () => {
 
     const fetchRes = await request(app).get('/api/schools');
     expect(fetchRes.statusCode).toEqual(200);
-    expect(Array.isArray(fetchRes.body)).toBe(true);
+    expect(fetchRes.body).toEqual(expect.arrayContaining([expect.objectContaining(schoolData)]));
   });
-});
 
-
-describe('School Routes - Integration Tests', () => {
   it('should return 404 for an undefined route', async () => {
     const res = await request(app).get('/api/non-existing-route');
     expect(res.statusCode).toBe(404);
